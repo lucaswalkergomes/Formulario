@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="Stylesheet" type="text/css" href="style.css" media="screen">
+    <title>Formulário</title>
+</head>
+<style>
+    *{
+        margin:0;padding: 0; box-sizing: border-box;
+    }
+    body{
+        background-color: #004D3C;
+    }
+    form input[type=text],
+form input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid white;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+form input[type=submit]{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+}
+form input[type=submit]:hover{
+    background-color: teal;
+}
+form input[type=text]:focus{
+    outline: 0;
+}
+form input[type=password]:focus{
+    outline: 0;
+}
+
+</style>
+<body>
+    <form>
+        <h3>Entrar Em Contato</h3>
+        <input id="nome completo" type="text" name="nome completo" placeholder="seu nome..."/>
+        <input id="endereço" type="text" name="endereço" placeholder="endereço..."/>
+        <input id="email" type="text" name="email" placeholder="seu e-mail..."/>
+        <input id="password" type="password" name="senha" placeholder="sua senha..."/>
+        <input type="submit" name="acao" value="Enviar"/>
+    </form>
+    <script>
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor - "4a5f6a"
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor - "#ccc"
+        });
+        password.addEventListener('focus',()=>{
+            password.style.borderColor - "4a5f6a"
+        });
+        password.addEventListener('blur',()=>{
+            password.style.borderColor - "#ccc"
+        });
+    </script>
+    
+</body>
+</html>
